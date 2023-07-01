@@ -1,38 +1,69 @@
 .App {
-  text-align: center;
+  width: 100%;
+  margin-top: 100px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ventilyator-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.logo {
+  transform-origin: 50% 50%;
+  animation: spin 1s /*оборот за 1секунду*/ linear infinite;
+  border: 10px solid black;
+  border-radius: 50%;
 }
-
-@keyframes App-logo-spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    /* transform: rotate(360deg); */
   }
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.buttons button {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  border-radius: 50px;
+}
+
+.buttons li button:focus {
+  box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.262);
+}
+.speed1:focus {
+  background-color: rgba(255, 0, 51, 0.652);
+}
+.speed2:focus {
+  background-color: rgba(255, 0, 51, 0.652);
+}
+.speed3:focus {
+  background-color: rgba(255, 0, 51, 0.652);
+}
+.speed0 {
+  background-color: rgba(0, 0, 255, 0.652);
+}
+
+.light {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons ul li {
+  list-style-type: none;
+}
+.tittle h1 {
+  text-align: center;
+  margin-bottom: 30px;
 }
