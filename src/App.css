@@ -12,11 +12,12 @@
   border: 10px solid black;
   border-radius: 50%;
   -webkit-transition: transform 200ms;
-  /* -webkit-transition: -webkit-transform 200ms */
+  -webkit-transition: -webkit-transform 200ms;
   transition: all 200ms;
 }
 @keyframes spin {
   from {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
