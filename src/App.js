@@ -9,7 +9,7 @@ function App() {
   let style = {
     width: "500px",
     height: "500px",
-    WebkitTransform: `rotate(${speed}deg)`,
+    WebkitTransform: `rotate(${speed + 2000}deg)`,
     transform: `rotate(${speed}deg)`,
   };
 
