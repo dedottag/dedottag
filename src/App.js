@@ -42,7 +42,7 @@ function App() {
             <button
               className="speed3"
               onClick={() => {
-                setSpeed("2000");
+                setSpeed(() => "2000");
                 console.log(speed);
               }}
             >
@@ -53,7 +53,7 @@ function App() {
             <button
               className="speed2"
               onClick={() => {
-                setSpeed("1000");
+                setSpeed(() => "1000");
                 console.log(speed);
               }}
             >
@@ -64,7 +64,7 @@ function App() {
             <button
               className="speed1"
               onClick={() => {
-                setSpeed("360");
+                setSpeed(() => "360");
                 console.log(speed);
               }}
             >
@@ -75,7 +75,7 @@ function App() {
             <button
               className="speed0"
               onClick={() => {
-                setSpeed("0");
+                setSpeed(() => "0");
                 setLight(false);
                 console.log(speed);
               }}
