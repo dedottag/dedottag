@@ -11,8 +11,8 @@
   animation: spin 1s /*оборот за 1секунду*/ linear infinite;
   border: 10px solid black;
   border-radius: 50%;
-  -webkit-transition: transform 200ms;
-  -webkit-transition: -webkit-transform 200ms;
+  -webkit-transition: transform all 200ms;
+  -webkit-transition: -webkit-transform all 200ms;
   transition: all 200ms;
 }
 @keyframes spin {
