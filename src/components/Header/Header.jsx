@@ -1,5 +1,5 @@
 import styles from "./Header.module.scss";
-import Switch from "react-ios-switch";
+import Switch from "react-switch";
 // import { useState } from "react";
 
 const Header = ({ checked, setCheked }) => {
@@ -10,12 +10,19 @@ const Header = ({ checked, setCheked }) => {
         <span>Темная тема</span>
         <div className={styles["toggle"]}>
           <div className={styles["toggles"]}>
-            <Switch
-              checked={checked}
-              onChange={() => {
-                setCheked(!checked);
-              }}
-            />
+            <label className={styles["label"]}>
+              <Switch
+                checked={checked}
+                onChange={() => {
+                  setCheked(!checked);
+                }}
+                width={100}
+                height={50}
+                uncheckedIcon={false}
+                checkedIcon={false}
+                offColor={"#bcbfc2"}
+              />
+            </label>
           </div>
         </div>
       </div>
