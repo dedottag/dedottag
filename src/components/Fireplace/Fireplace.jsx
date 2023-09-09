@@ -5,7 +5,7 @@ import Kamin from "./камин.png";
 import Kamin2 from "./heater_PNG35.png";
 
 const Fireplace = ({ checked }) => {
-  const [count, setCount] = useState(false);
+  const [count, setCount] = useState(true);
 
   const style = {
     color: "white",
@@ -15,10 +15,10 @@ const Fireplace = ({ checked }) => {
     <div className="fireplase-container" style={checked ? style : null}>
       <h1>Камин, чтобы тебе было не так холодно этой осенью</h1>
       <div className="img-container">
-        <img src={count ? Kamin : Kamin2} alt="камин" />
+        <img className="kamin" src={count ? Kamin : Kamin2} alt="камин" />
       </div>
       <div className="add-kamin">
-        <button onClick={() => setCount(!count)}>поменять обогреватель</button>
+        <div onClick={() => setCount(!count)}>поменять обогреватель</div>
       </div>
     </div>
   );

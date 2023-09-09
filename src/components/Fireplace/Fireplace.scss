@@ -15,6 +15,23 @@ h1 {
   font-size: 15px;
 }
 
+.img-container {
+  height: 900px;
+  margin-bottom: 70px;
+  margin-top: 30px;
+  img {
+    height: 900px;
+  }
+}
+
 .add-kamin {
-  width: 200px;
+  border-radius: 30px;
+  font-size: 20px;
+  background-color: brown;
+  width: 500px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
