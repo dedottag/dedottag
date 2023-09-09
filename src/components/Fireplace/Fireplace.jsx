@@ -18,7 +18,7 @@ const Fireplace = ({ checked }) => {
         <img className="kamin" src={count ? Kamin : Kamin2} alt="камин" />
       </div>
       <div className="add-kamin">
-        <div onClick={() => setCount(!count)}>поменять обогреватель</div>
+        <div onClick={() => setCount(!count)}>другой обогреватель</div>
       </div>
     </div>
   );
