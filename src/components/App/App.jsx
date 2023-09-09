@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Header checked={checked} setCheked={setCheked} />
-      <Fireplace />
+      <Fireplace checked={checked} />
     </div>
   );
 }

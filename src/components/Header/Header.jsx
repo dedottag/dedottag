@@ -3,8 +3,10 @@ import Switch from "react-switch";
 // import { useState } from "react";
 
 const Header = ({ checked, setCheked }) => {
+  const style = checked ? "header-dark" : "header";
+
   return (
-    <div className={styles["header"]}>
+    <div className={styles[style]}>
       <span className={styles["name"]}>Dedottag</span>
       <div className={styles["dark-mode"]}>
         <span>Темная тема</span>
