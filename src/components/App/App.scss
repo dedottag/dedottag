@@ -1,19 +1,18 @@
-.App {
-  max-width: 1100px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.dark-app {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.754);
+* {
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
+}
+
+.App {
+  width: 100hv;
+  height: 100vh;
+}
+
+@media (max-width: 500px) {
+  .App {
+    background-color: brown;
+  }
 }
