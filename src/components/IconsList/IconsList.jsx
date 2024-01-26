@@ -20,7 +20,10 @@ const IkonsList = () => {
         </a>
       </li>
       <li>
-        <a href="https://vk.com/dedottag" target="blank">
+        <a
+          href="https://www.instagram.com/dedottag?igsh=MTAyZDFrN3F0aWxwNA%3D%3D&utm_source=qr"
+          target="blank"
+        >
           <img src={InstagramIcon} alt="In" />
           {/* <span> - Instagram</span> */}
         </a>
