@@ -9,6 +9,7 @@ function App() {
       <Header />
       <div className="App">
         <MainPage />
+        {/* <Blog /> */}
       </div>
     </>
   );

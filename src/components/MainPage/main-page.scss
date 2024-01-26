@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400");
+
 .main-page-container {
   width: 1000px;
   height: 500px;
@@ -8,22 +10,30 @@
   width: 500px;
   height: 500px;
   padding: 20px;
-  background-color: #fff;
+  background-color: #dedede;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .data-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: blueviolet;
+  //   background-color: blueviolet;
   height: 150px;
 }
 
 .name {
-  width: 290px;
+  width: 260px;
   height: 40px;
   text-align: center;
-  background-color: aqua;
+  margin: 0;
+  //   background-color: aqua;
+  span {
+    font-size: 14px;
+  }
 }
 
 .logo-cat {
@@ -34,5 +44,26 @@
 .data-body {
   background-color: brown;
   width: 460px;
-  height: 310px;
+  //   height: 310px;
+}
+
+.my-data {
+  font-size: 20px;
+  list-style: none;
+  background-color: #fff;
+}
+
+.data-footer {
+  display: flex;
+  flex-wrap: wrap;
+  //   align-items: center;
+  justify-content: center;
+  width: 360px;
+  height: 120px;
+  //   background-color: blue;
+  span {
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: "Roboto Condensed", sans-serif;
+  }
 }
