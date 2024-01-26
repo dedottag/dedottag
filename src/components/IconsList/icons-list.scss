@@ -20,7 +20,6 @@ ul li a .fa {
 ul li a span {
   padding: 0;
   margin: 0;
-  //   position: absolute;
   top: 10px;
   font-size: 14px;
   color: #262626;
@@ -30,7 +29,6 @@ ul li a span {
 
 ul li a {
   text-decoration: none;
-  //   display: absolute;
   display: block;
   display: flex;
   align-items: center;
@@ -39,15 +37,11 @@ ul li a {
   height: 35px;
   background: #fff;
   text-align: left;
-  //   padding-left: 10px;
   transform: rotate(-30deg) skew(25deg) translate(0, 0);
   transition: 0.5s;
   box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
-  //   img {
-  //     margin-top: 8px;
-  //     margin-right: 5px;
-  //   }
 }
+
 ul li a:before {
   content: "";
   position: absolute;
@@ -59,6 +53,7 @@ ul li a:before {
   transform: 0.5s;
   transform: rotate(0deg) skewY(-45deg);
 }
+
 ul li a:after {
   content: "";
   position: absolute;

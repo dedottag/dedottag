@@ -6,7 +6,7 @@ import MainPage from "../MainPage/MainPage";
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="App">
         <MainPage />
         {/* <Blog /> */}
