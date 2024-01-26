@@ -9,10 +9,13 @@ body {
 .App {
   width: 100hv;
   height: 100vh;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 500px) {
   .App {
-    background-color: brown;
   }
 }

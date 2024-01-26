@@ -1,0 +1,38 @@
+.main-page-container {
+  width: 1000px;
+  height: 500px;
+  background-color: rgb(0, 132, 255);
+}
+
+.data-container {
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.data-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blueviolet;
+  height: 150px;
+}
+
+.name {
+  width: 290px;
+  height: 40px;
+  text-align: center;
+  background-color: aqua;
+}
+
+.logo-cat {
+  width: auto;
+  height: 150px;
+}
+
+.data-body {
+  background-color: brown;
+  width: 460px;
+  height: 310px;
+}
