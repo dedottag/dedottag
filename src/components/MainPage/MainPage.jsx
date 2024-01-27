@@ -14,9 +14,15 @@ const MainPage = () => {
         </div>
         <div className="data-body">
           <ul className="data-ul">
-            <li className="my-data">Электронная почта: chponga@mail.ru</li>
-            <li className="my-data">Номер телефона: +7(999) 127-27-72</li>
-            <li className="my-data">Дата рождения: 02 Августа 1999</li>
+            <li className="my-data">
+              <span>Электронная почта:</span> chponga@mail.ru
+            </li>
+            <li className="my-data">
+              <span>Номер телефона:</span> +7(999) 127-27-72
+            </li>
+            <li className="my-data">
+              <span>Дата рождения:</span> 02 Августа 1999
+            </li>
           </ul>
         </div>
         <div className="data-footer">
@@ -26,16 +32,18 @@ const MainPage = () => {
       </div>
       <div className="about-me-container">
         <div className="me-header">
-          <h1>коротко обо мне</h1>
+          <h2>коротко обо мне</h2>
         </div>
         <div className="history">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
-          explicabo nesciunt eum harum, est laboriosam. Repudiandae, sit facilis
-          reprehenderit dolore nam ipsum unde cumque eligendi consequuntur, enim
-          sapiente ratione ea. Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Atque recusandae voluptas quae quibusdam ab
-          repudiandae eligendi harum neque aut sint qui voluptatem omnis error,
-          nulla cupiditate quaerat quo quas minus.
+          Окончил университет по специальности Электроэнергетика и
+          электротехника, работал в электроэнергетической компании несколько
+          лет. В конце 21го решил сменить сферу деятельности и начал
+          самостоятельно изучать frontend. <br />
+          <span>
+            Есть некоторое количество самостоятельных проектов различной
+            сложности. Хочу улучшить свои имеющиеся навыки а также обучиться
+            новому в этом направлении.
+          </span>
         </div>
       </div>
     </div>
