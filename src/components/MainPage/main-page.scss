@@ -134,3 +134,9 @@
     color: rgb(161, 161, 161);
   }
 }
+
+@media (max-width: 900px) {
+  .main-page-container {
+    display: none;
+  }
+}

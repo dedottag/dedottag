@@ -1,0 +1,54 @@
+.main-page-mobile-container {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .main-page-mobile-container {
+    display: unset;
+  }
+  .data-mobile-container {
+    width: 100vw;
+    height: 80vh;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .data-mobile-header {
+    // background-color: brown;
+    width: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 40px;
+      margin-bottom: 0;
+    }
+    span {
+      font-size: 24px;
+      color: rgb(161, 161, 161);
+    }
+  }
+
+  .logo-cat-mobile {
+    width: 120px;
+    border-radius: 50%;
+  }
+
+  .data-ul {
+    display: flex;
+    justify-content: center;
+  }
+  .my-data {
+    font-size: 26px;
+    width: 300px;
+    text-align: center;
+    span {
+      font-size: 16px;
+    }
+  }
+}
