@@ -3,6 +3,10 @@
 }
 
 @media (max-width: 900px) {
+  // body {
+  // 	background-color: ;
+  // }
+
   .main-page-mobile-container {
     display: unset;
   }
@@ -11,6 +15,7 @@
     height: 80vh;
     background-color: #f8f8f8;
     margin-bottom: 20px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,6 +54,37 @@
     text-align: center;
     span {
       font-size: 16px;
+    }
+  }
+
+  .about-me-mobile-container {
+    // background-color: brown;
+    background-color: #fff;
+    width: 100vw;
+    height: 60vh;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+
+  .me-mobile-header {
+    width: 100vw;
+    height: 100px;
+    background-color: rgb(249, 194, 76);
+    position: relative;
+    top: 0px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    h2 {
+      font-size: 40px;
+      color: white;
+      margin-bottom: 0;
+      position: absolute;
+      bottom: -8px;
+      font-family: Verdana, sans-serif;
     }
   }
 }
