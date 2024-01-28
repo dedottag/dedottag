@@ -12,14 +12,16 @@
   }
   .data-mobile-container {
     width: 100vw;
-    height: 80vh;
+    // height: 80vh;
     background-color: #f8f8f8;
     margin-bottom: 20px;
     margin-top: 40px;
+    padding: 20px 0 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    // background-color: brown;
   }
 
   .data-mobile-header {
@@ -47,6 +49,8 @@
   .data-ul {
     display: flex;
     justify-content: center;
+    // background-color: brown;
+    margin: 20px 0 20px 0;
   }
   .my-data {
     font-size: 26px;
@@ -61,7 +65,7 @@
     // background-color: brown;
     background-color: #fff;
     width: 100vw;
-    height: 70vh;
+    // height: 70vh;
     margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -88,6 +92,6 @@
     }
   }
   .history {
-    margin: 0 20px 0 20px;
+    margin: 20px;
   }
 }
