@@ -8,6 +8,11 @@
   // background-color: rgb(0, 132, 255);
 }
 
+.main-dark {
+  background-color: rgb(49, 48, 48);
+  color: #ffe2b7;
+}
+
 .data-container {
   width: 500px;
   height: 500px;
@@ -19,6 +24,10 @@
   justify-content: center;
   align-items: end;
   position: relative;
+}
+
+.data-dark {
+  background-color: rgb(38, 38, 38);
 }
 
 .data-header {
@@ -70,21 +79,16 @@
 .data-ul {
   display: flex;
   flex-wrap: wrap;
-  // align-items: center;
-  // justify-content: center;
 }
 
 .data-footer {
   display: flex;
   flex-wrap: wrap;
-  //   align-items: center;
   justify-content: center;
   position: relative;
   bottom: -15px;
   width: 360px;
   height: 100px;
-  // margin-top: 40px;
-  // background-color: blue;
   span {
     padding-top: 20px;
     font-size: 20px;
@@ -119,13 +123,20 @@
     color: white;
     margin-bottom: 0;
     position: absolute;
-    bottom: -11px;
+    bottom: -10.5px;
     font-family: Verdana, sans-serif;
   }
 }
 
+.me-header-dark {
+  background-color: #845503;
+  h2 {
+    color: #ffe2b7;
+  }
+}
+
 .history {
-  background-color: #fff;
+  // background-color: #fff;
   font-size: 20px;
   text-align: left;
   width: 400px;

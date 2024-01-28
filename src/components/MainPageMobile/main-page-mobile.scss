@@ -67,6 +67,10 @@
     position: relative;
   }
 
+  .main-dark {
+    background-color: rgb(17, 42, 65);
+  }
+
   .me-mobile-header {
     width: 100vw;
     height: 100px;
@@ -85,7 +89,15 @@
       font-family: Verdana, sans-serif;
     }
   }
+
+  .me-header-dark {
+    background-color: #845503;
+    h2 {
+      color: #ffe2b7;
+    }
+  }
+
   .history {
-    margin: 20px;
+    margin: 20px 20px 0 20px;
   }
 }

@@ -2,10 +2,10 @@ import "./main-page-mobile.scss";
 import LogoCat from "../images/LogoCat.jpg";
 import IkonsList from "../IconsList/IconsList";
 
-const MainPageMobile = () => {
+const MainPageMobile = ({ dark }) => {
   return (
     <div className="main-page-mobile-container">
-      <div className="data-mobile-container">
+      <div className={`data-mobile-container ${dark ? "main-dark" : ""}`}>
         <div className="data-mobile-header">
           <img className="logo-cat-mobile" src={LogoCat} alt="logo" />
           <h1>Ибрагим Юсупов</h1>
@@ -26,12 +26,12 @@ const MainPageMobile = () => {
           </li>
         </ul>
         <div className="data-footer">
-          <IkonsList />
+          <IkonsList dark={dark} />
           @Dedottag
         </div>
       </div>
-      <div className="about-me-mobile-container">
-        <div className="me-mobile-header">
+      <div className={`about-me-mobile-container ${dark ? "main-dark" : ""}`}>
+        <div className={`me-mobile-header ${dark ? "me-header-dark" : ""}`}>
           <h2>коротко обо мне</h2>
         </div>
         <div className="history">
