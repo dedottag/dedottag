@@ -3,16 +3,11 @@
 }
 
 @media (max-width: 900px) {
-  // body {
-  // 	background-color: ;
-  // }
-
   .main-page-mobile-container {
     display: unset;
   }
   .data-mobile-container {
     width: 100vw;
-    // height: 80vh;
     background-color: #f8f8f8;
     margin-bottom: 20px;
     margin-top: 40px;
@@ -65,7 +60,6 @@
     // background-color: brown;
     background-color: #fff;
     width: 100vw;
-    // height: 70vh;
     margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;

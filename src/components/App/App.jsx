@@ -4,12 +4,10 @@ import MainPageMobile from "../MainPageMobile/MainPageMobile";
 
 function App() {
   return (
-    <>
-      <div className="App">
-        <MainPage />
-        <MainPageMobile />
-      </div>
-    </>
+    <div className="App">
+      <MainPage />
+      <MainPageMobile />
+    </div>
   );
 }
 
