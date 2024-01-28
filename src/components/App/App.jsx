@@ -6,8 +6,8 @@ import MainPageMobile from "../MainPageMobile/MainPageMobile";
 function App() {
   return (
     <>
-      {/* <Header /> */}
       <div className="App">
+        <Header />
         <MainPage />
         <MainPageMobile />
       </div>

@@ -1,32 +1,21 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   height: 100vh;
-  width: 100%;
   background-color: rgb(204, 230, 252);
   display: flex;
+  margin: 0;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
 .App {
-  // width: 1000px;
-  // height: 100vh;
-  // display: flex;
-  // flex-wrap: wrap;
-  // align-items: center;
-  // justify-content: center;
-  background-color: brown;
+  margin-top: 80px;
 }
-
-// .test {
-//   background-color: blue;
-//   width: 1100px;
-//   height: 100px;
-// }
 
 @media (max-width: 900px) {
 }
