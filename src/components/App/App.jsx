@@ -7,6 +7,7 @@ import { useState } from "react";
 
 function App() {
   const [dark, setDark] = useState(false);
+  console.log(dark);
 
   const body = document.getElementById("body");
   body.style.backgroundColor = dark ? "rgb(17, 42, 65)" : "";
