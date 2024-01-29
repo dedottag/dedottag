@@ -11,6 +11,9 @@
   justify-content: space-between;
   background-color: rgb(249, 194, 76);
   font-family: "Roboto Condensed", sans-serif;
+  img {
+    cursor: pointer;
+  }
 }
 
 .header-dark {
