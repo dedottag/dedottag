@@ -5,7 +5,6 @@ import moonIcon from "../IconsList/icons/moonIcon.svg";
 
 const Header = ({ dark, setDark }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  console.log(isDarkMode);
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevState) => !prevState);

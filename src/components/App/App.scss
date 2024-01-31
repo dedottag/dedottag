@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  transition: 0.5s;
 }
 
 body {
@@ -12,10 +13,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-// .dark-body {
-//   background-color: rgb(17, 42, 65);
-// }
 
 .App {
   margin-top: 80px;
