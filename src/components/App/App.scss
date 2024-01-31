@@ -18,5 +18,8 @@ body {
   margin-top: 80px;
 }
 
-@media (max-width: 900px) {
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(17, 42, 65);
+  }
 }

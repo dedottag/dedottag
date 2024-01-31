@@ -17,7 +17,24 @@
   }
 }
 
-.header-dark {
-  background-color: #845503;
-  color: #ffe2b7;
+.moon {
+  display: none;
+}
+
+// .header-dark {
+//   background-color: #845503;
+//   color: #ffe2b7;
+// }
+
+@media (prefers-color-scheme: dark) {
+  .header-container {
+    background-color: #845503;
+    color: #ffe2b7;
+  }
+  .moon {
+    display: unset;
+  }
+  .sun {
+    display: none;
+  }
 }

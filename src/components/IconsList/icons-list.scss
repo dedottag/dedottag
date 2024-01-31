@@ -66,16 +66,16 @@ ul li a:after {
   transform: rotate(0deg) skewX(-45deg);
 }
 
-.a-dark {
-  background: #b6b3b3;
-}
+// .a-dark {
+//   background: #b6b3b3;
+// }
 
-.a-dark:before {
-  background: #615f5f;
-}
-.a-dark:after {
-  background: #615f5f;
-}
+// .a-dark:before {
+//   background: #615f5f;
+// }
+// .a-dark:after {
+//   background: #615f5f;
+// }
 
 ul li a:hover {
   transform: rotate(-30deg) skew(25deg) translate(10px, -10px);
@@ -128,4 +128,16 @@ ul li:hover:nth-child(3) a:before {
 }
 ul li:hover:nth-child(3) a:after {
   background: #e46880;
+}
+
+@media (prefers-color-scheme: dark) {
+  ul li a:before {
+    background: #615f5f;
+  }
+  ul li a::after {
+    background: #615f5f;
+  }
+  ul li a {
+    background: #b6b3b3;
+  }
 }
