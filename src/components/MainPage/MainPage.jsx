@@ -17,7 +17,6 @@ const MainPage = ({ dark }) => {
         setCat(responseJson[0].url);
       }
     } catch {
-      setCat(LogoCat);
       console.log("что-то пошло не так");
     }
   }
