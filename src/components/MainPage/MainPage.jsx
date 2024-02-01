@@ -2,12 +2,36 @@ import "./main-page.scss";
 import LogoCat from "../images/LogoCat.jpg";
 import IkonsList from "../IconsList/IconsList";
 
+import { useState } from "react";
+
 const MainPage = ({ dark }) => {
+  const [cat, setCat] = useState(LogoCat);
+
+  async function getCat() {
+    try {
+      const response = await fetch(
+        "https://api.thecatapi.com/v1/images/search?"
+      );
+      const responseJson = await response.json();
+      if (responseJson) {
+        setCat(responseJson[0].url);
+      }
+    } catch {
+      setCat(LogoCat);
+      console.log("что-то пошло не так");
+    }
+  }
+
   return (
     <div className={`main-page-container ${dark ? "main-dark" : ""}`}>
       <div className={`data-container ${dark ? "data-dark" : ""}`}>
         <div className="data-header">
-          <img className="logo-cat" src={LogoCat} alt="logo" />
+          <img
+            className="logo-cat"
+            src={cat}
+            alt="logo"
+            onClick={() => getCat()}
+          />
           <h1 className="name">
             Ибрагим Юсупов <span>Фронтенд разработчик (кажется)</span>
           </h1>

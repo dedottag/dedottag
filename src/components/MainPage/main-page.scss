@@ -54,8 +54,12 @@
 }
 
 .logo-cat {
+  // width: auto;
+  // height: 150px;
   width: auto;
-  height: 150px;
+  height: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .data-body {
