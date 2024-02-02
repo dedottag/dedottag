@@ -2,8 +2,9 @@ import "./App.scss";
 import Header from "../Header/Header";
 import MainPage from "../MainPage/MainPage";
 import MainPageMobile from "../MainPageMobile/MainPageMobile";
+import MySkills from "../MySkills/MySkills";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function App() {
   const [dark, setDark] = useState(false);
@@ -20,6 +21,7 @@ function App() {
       <Header dark={dark} setDark={setDark} />
       <MainPage dark={dark} />
       <MainPageMobile dark={dark} />
+      <MySkills />
     </div>
   );
 }
