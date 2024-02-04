@@ -32,6 +32,7 @@ const MySkills = () => {
     scrollContainerToMiddle(containerRef2);
     scrollContainerToMiddle(containerRef3);
   }, []);
+  console.log(containerRef1);
 
   return (
     <div className="my-skills-container">
