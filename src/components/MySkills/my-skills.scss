@@ -1,7 +1,7 @@
 .my-skills-container {
   max-width: 1000px;
   height: 500px;
-  margin: 30px 0 30px 0;
+  margin: 20px 0 20px 0;
   background-color: rgb(49, 48, 48);
   position: relative;
 }
@@ -26,7 +26,6 @@
 }
 
 .skill-icons-container {
-  // background-color: #fff;
   width: 100%;
   height: 420px;
   display: flex;
@@ -34,7 +33,6 @@
 }
 
 .icons-container {
-  // background-color: #fff;
   width: 200px;
   height: 420px;
   display: flex;
@@ -42,8 +40,6 @@
   overflow: scroll;
   align-items: center;
   justify-content: center;
-  // position: relative;
-  // top: -80px;
 }
 
 .icons-container::-webkit-scrollbar {
@@ -56,6 +52,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   // background-color: #fff;
 }
 
@@ -89,6 +86,46 @@
 
 @media (max-width: 900px) {
   .my-skills-container {
-    display: none;
+    height: 350px;
+    background-color: transparent;
+    // background-color: #fff;
+  }
+  .my-skills-header {
+    font-size: 18px;
+    position: relative;
+    h1 {
+      position: absolute;
+      bottom: -7px;
+    }
+  }
+  .skill-icons-container {
+    // width: 100%;
+    height: 270px;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    align-items: center;
+    // background-color: blue;
+  }
+
+  .icons-container {
+    // background-color: #480607;
+    height: 228px;
+    width: 75px;
+  }
+  .iconic {
+    // background-color: #cd5c5c;
+    height: 170px;
+    width: 75px;
+  }
+  .skill-icon {
+    height: 75px;
+    border-radius: 10px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    .my-skills-container {
+      background-color: #fff;
+    }
   }
 }
