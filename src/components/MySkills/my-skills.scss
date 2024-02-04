@@ -14,24 +14,81 @@
   justify-content: center;
   color: #ffe2b7;
   font-family: Verdana, sans-serif;
-  font-size: 35px;
+  font-size: 20px;
   position: relative;
   display: flex;
-
+  z-index: 1;
+  overflow: hidden;
   h1 {
     position: relative;
-    bottom: -14.2px;
+    bottom: -24px;
   }
 }
 
-.icons-container {
+.skill-icons-container {
+  // background-color: #fff;
   width: 100%;
   height: 420px;
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
-  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+}
+
+.icons-container {
+  // background-color: #fff;
+  width: 200px;
+  height: 420px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  align-items: center;
+  justify-content: center;
+  // position: relative;
+  // top: -80px;
+}
+
+.icons-container::-webkit-scrollbar {
+  display: none;
+}
+
+.iconic {
+  height: 420px;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   // background-color: #fff;
 }
-.icons-container::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
+
+.skill-icon {
+  height: 200px;
+  border: 1px solid wheat;
+  border-radius: 20px;
+}
+
+.skill-icon:hover {
+  background-color: #480607;
+}
+
+@media (prefers-color-scheme: light) {
+  .my-skills-container {
+    background-color: #f8f8f8;
+  }
+  .skill-icon {
+    border: 1px solid #480607;
+  }
+  .skill-icon:hover {
+    background-color: rgb(17, 42, 65);
+  }
+  .my-skills-header {
+    background-color: #cd5c5c;
+    h1 {
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .my-skills-container {
+    display: none;
+  }
 }
