@@ -42,7 +42,7 @@ const MySkills = () => {
       scrollContainerToMiddle(containerRef1);
       scrollContainerToMiddle(containerRef2);
       scrollContainerToMiddle(containerRef3);
-    }, 1000);
+    });
   }, []);
 
   return (
