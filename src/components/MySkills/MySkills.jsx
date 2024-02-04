@@ -21,16 +21,27 @@ const MySkills = () => {
   const containerRef2 = useRef(null);
   const containerRef3 = useRef(null);
 
+  const scrollContainerToMiddle = (containerRef) => {
+    if (containerRef.current) {
+      const container = containerRef.current;
+      const scrollHeight = container.scrollHeight;
+      const clientHeight = container.clientHeight;
+      container.scrollTop = (scrollHeight - clientHeight) / 2;
+    } else {
+      console.error("Container element not found");
+    }
+  };
+
   useEffect(() => {
-    const scrollContainerToMiddle = (containerRef) => {
-      if (containerRef.current.children !== null) {
-        console.log(containerRef);
-        const container = containerRef?.current;
-        const containerHeight = container.scrollHeight;
-        container.scrollTop =
-          containerHeight / 2 - container.getBoundingClientRect().height / 2;
-      }
-    };
+    // const scrollContainerToMiddle = (containerRef) => {
+    //   if (containerRef.current.children !== null) {
+    //     console.log(containerRef);
+    //     const container = containerRef?.current;
+    //     const containerHeight = container.scrollHeight;
+    //     container.scrollTop =
+    //       containerHeight / 2 - container.getBoundingClientRect().height / 2;
+    //   }
+    // };
     scrollContainerToMiddle(containerRef1);
     scrollContainerToMiddle(containerRef2);
     scrollContainerToMiddle(containerRef3);
