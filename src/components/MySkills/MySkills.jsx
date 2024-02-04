@@ -28,6 +28,7 @@ const MySkills = () => {
       const clientHeight = container.clientHeight;
       // container.scrollTop = (scrollHeight - clientHeight) / 2;
       container.scrollTop = 90;
+      console.log(container.scrollTop);
       // console.log(containerRef.current.scrollHeight, "scrollHeight");
       // console.log(containerRef.current.clientHeight, "clientHeight");
       // console.log(container.scrollTop, "scrollTop");
