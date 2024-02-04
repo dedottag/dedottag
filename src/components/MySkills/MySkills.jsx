@@ -23,10 +23,14 @@ const MySkills = () => {
 
   useEffect(() => {
     const scrollContainerToMiddle = (containerRef) => {
-      const container = containerRef?.current;
-      const containerHeight = container.scrollHeight;
-      container.scrollTop =
-        containerHeight / 2 - container.getBoundingClientRect().height / 2;
+      console.log(containerRef.current);
+      if (containerRef.current) {
+        console.log(containerRef.current);
+        const container = containerRef?.current;
+        const containerHeight = container.scrollHeight;
+        container.scrollTop =
+          containerHeight / 2 - container.getBoundingClientRect().height / 2;
+      }
     };
     scrollContainerToMiddle(containerRef1);
     scrollContainerToMiddle(containerRef2);
