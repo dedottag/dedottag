@@ -38,9 +38,11 @@ const MySkills = () => {
   };
 
   useEffect(() => {
-    scrollContainerToMiddle(containerRef1);
-    scrollContainerToMiddle(containerRef2);
-    scrollContainerToMiddle(containerRef3);
+    setTimeout(() => {
+      scrollContainerToMiddle(containerRef1);
+      scrollContainerToMiddle(containerRef2);
+      scrollContainerToMiddle(containerRef3);
+    }, 1000);
   }, []);
 
   return (
