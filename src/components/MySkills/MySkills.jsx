@@ -26,12 +26,7 @@ const MySkills = () => {
       const container = containerRef.current;
       const scrollHeight = container.scrollHeight;
       const clientHeight = container.clientHeight;
-      // container.scrollTop = (scrollHeight - clientHeight) / 2;
-      container.scrollTop = 90;
-      console.log(container.scrollTop);
-      // console.log(containerRef.current.scrollHeight, "scrollHeight");
-      // console.log(containerRef.current.clientHeight, "clientHeight");
-      // console.log(container.scrollTop, "scrollTop");
+      container.scrollTop = (scrollHeight - clientHeight) / 2;
     } else {
       console.error("Container element not found");
     }
@@ -42,7 +37,7 @@ const MySkills = () => {
       scrollContainerToMiddle(containerRef1);
       scrollContainerToMiddle(containerRef2);
       scrollContainerToMiddle(containerRef3);
-    });
+    }, 100);
   }, []);
 
   return (
