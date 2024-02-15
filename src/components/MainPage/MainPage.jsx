@@ -6,7 +6,6 @@ import { useState } from "react";
 
 const MainPage = ({ dark }) => {
   const [cat, setCat] = useState(LogoCat);
-
   async function getCat() {
     try {
       const response = await fetch(
