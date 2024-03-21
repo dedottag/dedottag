@@ -1,4 +1,4 @@
-<h1>Приветствую, меня зовут Ибрагим, я Frontend разработчик!</h1>
+<h1 align="center">Приветствую, меня зовут Ибрагим, я Frontend разработчик!</h1>
 
 <h2>Мой стек технологий, с которым я работаю:</h2>
 
@@ -36,9 +36,16 @@
 ---
 
 <h2>Связь со мной:</h2>
+<div style="margin-bottom: 15px;">
+<img align="left" alt="Mail" width="26px" src="https://cdn-icons-png.flaticon.com/512/8898/8898833.png" style="padding-right:20px;" />
 
-- Email: chponga@mail.ru
-- [Телеграм](https://t.me/Dedottag)
+- chponga@mail.ru
+</div>
+<div>
+  <img align="left" alt="Mail" width="26px" src="https://cdn-icons-png.flaticon.com/512/3536/3536661.png" style="padding-right:20px;" />
+
+- [Dedottag](https://t.me/Dedottag)
+</div>
 
 ---
 
