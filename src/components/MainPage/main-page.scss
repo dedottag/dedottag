@@ -65,10 +65,8 @@
 }
 
 .data-body {
-  // background-color: brown;
   width: 440px;
   height: 150px;
-  // margin-bottom: 30px;
 }
 
 .my-data {
@@ -79,6 +77,10 @@
   font-family: Andale Mono, monospace;
   span {
     color: rgb(161, 161, 161);
+  }
+  .copy-span {
+    cursor: pointer;
+    color: black;
   }
 }
 
@@ -196,6 +198,12 @@
       color: #ffe2b7;
     }
   }
+  .my-data {
+    .copy-span {
+      color: #ffe2b7;
+    }
+  }
+
   .data-container {
     background-color: rgb(38, 38, 38);
   }

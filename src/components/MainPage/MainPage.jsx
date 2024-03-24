@@ -52,17 +52,15 @@ const MainPage = ({ dark }) => {
           <ul className="data-ul">
             <li className="my-data">
               <span>Электронная почта:</span>
-              <span
-                style={{ cursor: "pointer" }}
-                onClick={(e) => copyToClickBord(e)}
-              >
+              <span className="copy-span" onClick={(e) => copyToClickBord(e)}>
                 chponga@mail.ru
               </span>
             </li>
             <li className="my-data">
-              <span>Номер телефона:</span>{" "}
+              <span>Номер телефона:</span>
               <span
-                style={{ cursor: "pointer" }}
+                className="copy-span"
+                style={{ backgroundColor: "#ffe2b7;" }}
                 onClick={(e) => copyToClickBord(e)}
               >
                 +7(999) 127-27-72
