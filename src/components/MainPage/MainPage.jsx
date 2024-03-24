@@ -4,6 +4,20 @@ import IkonsList from "../IconsList/IconsList";
 
 import { useState } from "react";
 
+function copyToClickBord(text) {
+  const copy = document.querySelector(".mail-copy-container");
+  copy.style.display = "table";
+  if (text.target.textContent === "chponga@mail.ru") {
+    copy.textContent = "Почтовый адрес скопирован";
+  } else {
+    copy.textContent = "Номер телефона скопирован";
+  }
+  setTimeout(() => {
+    copy.style.display = "none";
+  }, 2000);
+  return navigator.clipboard.writeText(text.target.textContent);
+}
+
 const MainPage = ({ dark }) => {
   const [cat, setCat] = useState(LogoCat);
   async function getCat() {
@@ -31,16 +45,28 @@ const MainPage = ({ dark }) => {
             onClick={() => getCat()}
           />
           <h1 className="name">
-            Ибрагим Юсупов <span>Фронтенд разработчик (кажется)</span>
+            Ибрагим Юсупов <span>Фронтенд разработчик</span>
           </h1>
         </div>
         <div className="data-body">
           <ul className="data-ul">
             <li className="my-data">
-              <span>Электронная почта:</span> chponga@mail.ru
+              <span>Электронная почта:</span>
+              <span
+                style={{ cursor: "pointer" }}
+                onClick={(e) => copyToClickBord(e)}
+              >
+                chponga@mail.ru
+              </span>
             </li>
             <li className="my-data">
-              <span>Номер телефона:</span> +7(999) 127-27-72
+              <span>Номер телефона:</span>{" "}
+              <span
+                style={{ cursor: "pointer" }}
+                onClick={(e) => copyToClickBord(e)}
+              >
+                +7(999) 127-27-72
+              </span>
             </li>
             <li className="my-data">
               <span>Дата рождения:</span> 02 Августа 1999
@@ -72,6 +98,7 @@ const MainPage = ({ dark }) => {
           </span>
         </div>
       </div>
+      <div className="mail-copy-container"></div>
     </div>
   );
 };
