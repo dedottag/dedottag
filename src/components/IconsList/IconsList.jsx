@@ -3,6 +3,9 @@ import VkIcon from "./icons/icon.svg";
 import InstagramIcon from "./icons/instagram.svg";
 import TelegramIcon from "./icons/telegram.svg";
 import GithubIcon from "./icons/gihub.svg";
+import WhatsAppIcon from "./icons/whatsapp.png";
+
+console.log(window.innerWidth);
 
 const IkonsList = ({ dark }) => {
   return (
@@ -15,6 +18,16 @@ const IkonsList = ({ dark }) => {
         >
           <img src={GithubIcon} alt="gitHub" />
           {/* <span> - Github</span> */}
+        </a>
+      </li>
+      <li>
+        <a
+          className={dark ? "a-dark" : ""}
+          href="https://wa.me/79679481068"
+          target="blank"
+        >
+          <img style={{ width: "22px" }} src={WhatsAppIcon} alt="whatsApp" />
+          {/* <span> - WhatsApp</span> */}
         </a>
       </li>
       <li>
@@ -37,16 +50,18 @@ const IkonsList = ({ dark }) => {
           {/* <span> - Instagram</span> */}
         </a>
       </li>
-      <li>
-        <a
-          className={dark ? "a-dark" : ""}
-          href="https://vk.com/dedottag"
-          target="blank"
-        >
-          <img src={VkIcon} alt="vk" />
-          {/* <span> - VK</span> */}
-        </a>
-      </li>
+      {window.innerWidth > 390 && (
+        <li>
+          <a
+            className={dark ? "a-dark" : ""}
+            href="https://vk.com/dedottag"
+            target="blank"
+          >
+            <img src={VkIcon} alt="vk" />
+            {/* <span> - VK</span> */}
+          </a>
+        </li>
+      )}
     </ul>
   );
 };

@@ -4,7 +4,7 @@ import IkonsList from "../IconsList/IconsList";
 
 import { useState } from "react";
 
-function copyToClickBord(text) {
+export function copyToClickBord(text) {
   const copy = document.querySelector(".mail-copy-container");
   copy.style.display = "table";
   if (text.target.textContent === "chponga@mail.ru") {
@@ -58,11 +58,7 @@ const MainPage = ({ dark }) => {
             </li>
             <li className="my-data">
               <span>Номер телефона:</span>
-              <span
-                className="copy-span"
-                style={{ backgroundColor: "#ffe2b7;" }}
-                onClick={(e) => copyToClickBord(e)}
-              >
+              <span className="copy-span" onClick={(e) => copyToClickBord(e)}>
                 +7(999) 127-27-72
               </span>
             </li>
