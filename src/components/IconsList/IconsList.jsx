@@ -50,7 +50,7 @@ const IkonsList = ({ dark }) => {
           {/* <span> - Instagram</span> */}
         </a>
       </li>
-      {window.innerWidth > 390 && (
+      {window.innerWidth > 400 && (
         <li>
           <a
             className={dark ? "a-dark" : ""}
