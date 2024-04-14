@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import MainPage from "../MainPage/MainPage";
 import MainPageMobile from "../MainPageMobile/MainPageMobile";
 import MySkills from "../MySkills/MySkills";
+import References from "../References/References";
 
 import { useState } from "react";
 
@@ -22,6 +23,7 @@ function App() {
       <MainPage dark={dark} />
       <MainPageMobile dark={dark} />
       <MySkills />
+      <References />
     </div>
   );
 }

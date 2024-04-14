@@ -5,8 +5,6 @@ import TelegramIcon from "./icons/telegram.svg";
 import GithubIcon from "./icons/gihub.svg";
 import WhatsAppIcon from "./icons/whatsapp.png";
 
-console.log(window.innerWidth);
-
 const IkonsList = ({ dark }) => {
   return (
     <ul>
