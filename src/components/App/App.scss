@@ -6,17 +6,24 @@
 }
 
 body {
-  height: 100vh;
+  position: relative;
+  // height: 100vh;
   background-color: rgb(204, 230, 252);
-  display: flex;
-  margin: 0;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // margin: 0;
+  // flex-wrap: wrap;
+  // align-items: center;
+  // justify-content: center;
 }
 
 .App {
-  margin-top: 100px;
+  // background-color: #fff;
+  // width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (prefers-color-scheme: dark) {

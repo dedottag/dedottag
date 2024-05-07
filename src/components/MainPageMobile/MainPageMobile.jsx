@@ -1,10 +1,43 @@
 import "./main-page-mobile.scss";
 import LogoCat from "../images/LogoCat.jpg";
 import IkonsList from "../IconsList/IconsList";
+import { useDispatch } from "react-redux";
+import { mainViewAction } from "../store/dedottagReduser";
+import { useEffect, useMemo } from "react";
 
-const MainPageMobile = ({ dark }) => {
+const MainPageMobile = ({ dark, mainRefMob }) => {
+  const dispatch = useDispatch();
+  // const targetRef = useRef(null);
+
+  const callbackFunction = (entries) => {
+    const [entry] = entries; //const entry = entries[0]
+
+    dispatch(mainViewAction(entry.isIntersecting));
+  };
+
+  const options = useMemo(() => {
+    return {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunction, options);
+    const currentTarget = mainRefMob.current;
+
+    if (currentTarget) observer.observe(currentTarget);
+
+    return () => {
+      if (currentTarget) {
+        observer.unobserve(currentTarget);
+      }
+    };
+  }, [mainRefMob, options]);
+
   return (
-    <div className="main-page-mobile-container">
+    <div className="main-page-mobile-container" ref={mainRefMob}>
       <div className={`data-mobile-container ${dark ? "main-dark" : ""}`}>
         <div className="data-mobile-header">
           <img className="logo-cat-mobile" src={LogoCat} alt="logo" />

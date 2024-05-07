@@ -1,8 +1,10 @@
 import "./main-page.scss";
 import LogoCat from "../images/LogoCat.jpg";
 import IkonsList from "../IconsList/IconsList";
+import { useDispatch } from "react-redux";
+import { mainViewAction } from "../store/dedottagReduser";
 
-import { useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 export function copyToClickBord(text) {
   const copy = document.querySelector(".mail-copy-container");
@@ -18,8 +20,38 @@ export function copyToClickBord(text) {
   return navigator.clipboard.writeText(text.target.textContent);
 }
 
-const MainPage = ({ dark }) => {
+const MainPage = ({ dark, mainRef }) => {
   const [cat, setCat] = useState(LogoCat);
+  const dispatch = useDispatch();
+  // const targetRef = useRef(null);
+
+  const callbackFunction = (entries) => {
+    const [entry] = entries; //const entry = entries[0]
+
+    dispatch(mainViewAction(entry.isIntersecting));
+  };
+
+  const options = useMemo(() => {
+    return {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunction, options);
+    const currentTarget = mainRef.current;
+
+    if (currentTarget) observer.observe(currentTarget);
+
+    return () => {
+      if (currentTarget) {
+        observer.unobserve(currentTarget);
+      }
+    };
+  }, [mainRef, options]);
+
   async function getCat() {
     try {
       const response = await fetch(
@@ -35,7 +67,10 @@ const MainPage = ({ dark }) => {
   }
 
   return (
-    <div className={`main-page-container ${dark ? "main-dark" : ""}`}>
+    <div
+      className={`main-page-container ${dark ? "main-dark" : ""}`}
+      ref={mainRef}
+    >
       <div className={`data-container ${dark ? "data-dark" : ""}`}>
         <div className="data-header">
           <img

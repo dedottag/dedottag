@@ -4,28 +4,33 @@ import MainPage from "../MainPage/MainPage";
 import MainPageMobile from "../MainPageMobile/MainPageMobile";
 import MySkills from "../MySkills/MySkills";
 import References from "../References/References";
+import NavigateButtons from "../NavigateButtons/NavigateButtons";
 
-import { useState } from "react";
+import { useRef } from "react";
 
-function App() {
-  const [dark, setDark] = useState(false);
-
-  // const body = document.getElementById("body");
-  // body.style.backgroundColor = dark ? "rgb(17, 42, 65)" : "";
-
-  // useEffect(() => {
-  //   console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
-  // }, [window.matchMedia("(prefers-color-scheme: dark)").matches]);
+const App = () => {
+  const skillRef = useRef(null);
+  const mainRef = useRef(null);
+  const referenceRef = useRef(null);
+  const mainRefMob = useRef(null);
 
   return (
-    <div className="App">
-      <Header dark={dark} setDark={setDark} />
-      <MainPage dark={dark} />
-      <MainPageMobile dark={dark} />
-      <MySkills />
-      <References />
-    </div>
+    <>
+      <Header
+        skillRef={skillRef}
+        mainRef={mainRef}
+        referenceRef={referenceRef}
+        mainRefMob={mainRefMob}
+      />
+      {/* <NavigateButtons /> */}
+      <div className="App">
+        <MainPage mainRef={mainRef} />
+        <MainPageMobile mainRefMob={mainRefMob} />
+        <MySkills skillRef={skillRef} />
+        <References referenceRef={referenceRef} />
+      </div>
+    </>
   );
-}
+};
 
 export default App;

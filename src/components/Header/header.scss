@@ -1,9 +1,8 @@
 .header-container {
-  position: absolute;
-  width: 100%;
+  position: sticky;
+  width: 100vw;
   height: 80px;
   top: 0;
-  left: 0;
   z-index: 999;
   display: flex;
   align-items: center;
@@ -33,5 +32,11 @@
   }
   .sun {
     display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-container {
+    position: relative;
   }
 }

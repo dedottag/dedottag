@@ -1,10 +1,43 @@
 import "./references.scss";
+import { useDispatch } from "react-redux";
+import { refenceViewAction } from "../store/dedottagReduser";
+import { useEffect, useMemo } from "react";
 
-const References = () => {
+const References = ({ referenceRef }) => {
+  const dispatch = useDispatch();
+  //   const targetRef = useRef(null);
+
+  const callbackFunction = (entries) => {
+    const [entry] = entries; //const entry = entries[0]
+
+    dispatch(refenceViewAction(entry.isIntersecting));
+  };
+
+  const options = useMemo(() => {
+    return {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunction, options);
+    const currentTarget = referenceRef.current;
+
+    if (currentTarget) observer.observe(currentTarget);
+
+    return () => {
+      if (currentTarget) {
+        observer.unobserve(currentTarget);
+      }
+    };
+  }, [referenceRef, options]);
+
   return (
     <>
       <h1 className="reference-tittle">Некоторые работы</h1>
-      <div className="references-container">
+      <div className="references-container" ref={referenceRef}>
         <div className="iframe-container">
           <iframe
             src="https://game-training.vercel.app/"
