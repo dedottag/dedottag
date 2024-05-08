@@ -5,6 +5,7 @@ const initialState = {
   skillView: false,
   referenceView: false,
   skillRef: null,
+  showMoreButtonView: false,
 };
 
 const dedottagSlice = createSlice({
@@ -23,6 +24,9 @@ const dedottagSlice = createSlice({
     addSkillRef(state, action) {
       state.referenceView = action.payload;
     },
+    addMoreButtonView(state, action) {
+      state.showMoreButtonView = action.payload;
+    },
   },
 });
 
@@ -31,6 +35,7 @@ export const {
   mainViewAction,
   refenceViewAction,
   addSkillRef,
+  addMoreButtonView,
 } = dedottagSlice.actions;
 
 export default dedottagSlice.reducer;

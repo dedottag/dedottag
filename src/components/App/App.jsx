@@ -4,7 +4,7 @@ import MainPage from "../MainPage/MainPage";
 import MainPageMobile from "../MainPageMobile/MainPageMobile";
 import MySkills from "../MySkills/MySkills";
 import References from "../References/References";
-import NavigateButtons from "../NavigateButtons/NavigateButtons";
+import ShowMoreButton from "../ShowMoreButton/ShowMoreButton";
 
 import { useRef } from "react";
 
@@ -28,6 +28,7 @@ const App = () => {
         <MainPageMobile mainRefMob={mainRefMob} />
         <MySkills skillRef={skillRef} />
         <References referenceRef={referenceRef} />
+        <ShowMoreButton />
       </div>
     </>
   );
