@@ -13,18 +13,9 @@ const HeaderButtons = ({ skillRef, mainRef, referenceRef, mainRefMob }) => {
   );
   const [mobile, setMobile] = useState(window.innerWidth < 900);
 
-  // const refe = useSelector((state) => state.dedottag.skillRef);
-  // console.log(skillRef);
-
-  const viewStyle = {
-    borderBottom: mobile
-      ? "2px solid transparate"
-      : theme
-      ? "2px solid #ffe2b7"
-      : "2px solid rgb(17, 42, 65)",
-    color: theme ? "#ffe2b7" : "rgb(17, 42, 65)",
-    textDecoration: mobile ? "underline" : "none",
-  };
+  window.addEventListener("resize", () => {
+    setMobile(window.innerWidth < 900);
+  });
 
   window
     .matchMedia("(prefers-color-scheme: dark)")
@@ -32,11 +23,18 @@ const HeaderButtons = ({ skillRef, mainRef, referenceRef, mainRefMob }) => {
       setTheme(e.matches);
     });
 
-  // const classes = [
-  //   { name: "верх", style: mainView },
-  //   { name: "середина", style: skillView },
-  //   { name: "низ", style: referenceView },
-  // ];
+  const desctopStyle = {
+    borderBottom: theme ? "2px solid #ffe2b7" : "2px solid rgb(17, 42, 65)",
+    color: theme ? "#ffe2b7" : "rgb(17, 42, 65)",
+  };
+
+  const mobileStile = {
+    borderBottom: "2px solid transparate",
+    backgroundColor: theme ? "#845503" : "rgb(17, 42, 65)",
+    color: theme ? "rgb(17, 42, 65)" : "#ffe2b7",
+  };
+
+  const viewStyle = mobile ? mobileStile : desctopStyle;
 
   const handleClick = (ref, block) => {
     ref.current?.scrollIntoView({ behavior: "smooth", block: block });
@@ -75,7 +73,7 @@ const HeaderButtons = ({ skillRef, mainRef, referenceRef, mainRefMob }) => {
         style={referenceView ? viewStyle : null}
         onClick={() => handleClick(referenceRef, "start")}
       >
-        портфолио
+        {mobile ? "примеры работ" : "портфолио"}
       </button>
     </div>
   );
