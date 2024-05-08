@@ -18,7 +18,7 @@ const ShowMoreButton = () => {
 
   const pStyle = {
     opacity: "1",
-    transition: "2s",
+    transition: "3s",
   };
 
   const callbackFunction = (entries) => {
