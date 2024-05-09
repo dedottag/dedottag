@@ -32,6 +32,9 @@ const HeaderButtons = ({ skillRef, mainRef, referenceRef, mainRefMob }) => {
     borderBottom: "2px solid transparate",
     backgroundColor: theme ? "#845503" : "rgb(17, 42, 65)",
     color: theme ? "rgb(17, 42, 65)" : "#ffe2b7",
+    width: "70px",
+    height: "70px",
+    fontSize: "16px",
   };
 
   const viewStyle = mobile ? mobileStile : desctopStyle;
