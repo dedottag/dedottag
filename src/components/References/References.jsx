@@ -34,64 +34,54 @@ const References = ({ referenceRef }) => {
     };
   }, [referenceRef, options]);
 
+  const iframes = [
+    {
+      src: "https://game-training.vercel.app/",
+      tittle: "gameTraining",
+      name: "Game Training",
+    },
+    {
+      src: "https://image-slider-dusky.vercel.app/",
+      tittle: "imageSlider",
+      name: "Image Slider",
+    },
+    {
+      src: "https://board-henna.vercel.app/",
+      tittle: "board",
+      name: "Board",
+    },
+    {
+      src: "https://cards-gallery.vercel.app/",
+      tittle: "cardsGallery",
+      name: "Cards Gallery",
+    },
+    {
+      src: "https://chart-azure.vercel.app/",
+      tittle: "chart",
+      name: "Chart",
+    },
+  ];
+
+  const mobileIframes = iframes.filter(
+    (iframe) => iframe.name !== "Board" && iframe.name !== "Game Training"
+  );
+
+  const resultIframeArr = window.innerWidth > 900 ? iframes : mobileIframes;
+
   return (
     <>
       <h1 className="reference-tittle">Некоторые работы</h1>
       <div className="references-container" ref={referenceRef}>
-        <div className="iframe-container">
-          <iframe
-            src="https://game-training.vercel.app/"
-            title="gameTraining"
-          ></iframe>
-          <h2>
-            <a href="https://game-training.vercel.app/" target="blank">
-              Game Training
-            </a>
-          </h2>
-        </div>
-        <div className="iframe-container">
-          <iframe
-            src="https://image-slider-dusky.vercel.app/"
-            title="imageSlider"
-          ></iframe>
-          <h2>
-            <a href="https://image-slider-dusky.vercel.app/" target="blank">
-              Image Slider
-            </a>
-          </h2>
-        </div>
-        {window.innerWidth > 400 && (
-          <div className="iframe-container">
-            <iframe
-              src="https://board-henna.vercel.app/"
-              title="board"
-            ></iframe>
+        {resultIframeArr.map((iframe) => (
+          <div className="iframe-container" key={iframe.src}>
+            <iframe src={iframe.src} title={iframe.tittle}></iframe>
             <h2>
-              <a href="https://board-henna.vercel.app/" target="blank">
-                Board
+              <a href={iframe.src} target="blank">
+                {iframe.name}
               </a>
             </h2>
           </div>
-        )}
-        <div className="iframe-container">
-          <iframe
-            src="https://cards-gallery.vercel.app/"
-            title="cardsGallery"
-          ></iframe>
-          <h2>
-            <a href="https://cards-gallery.vercel.app/" target="blank">
-              Cards Gallery
-            </a>
-          </h2>
-        </div>
-        <div className="iframe-container">
-          <iframe src="https://chart-azure.vercel.app/" title="chart"></iframe>
-          <h2>
-            <a href="https://chart-azure.vercel.app/" target="blank">
-              Chart
-            </a>
-          </h2>
-        </div>
+        ))}
       </div>
     </>
   );
