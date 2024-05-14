@@ -2,7 +2,7 @@ import "./my-skills.scss";
 
 import { useEffect, useRef, useMemo } from "react";
 import { useDispatch } from "react-redux";
-import { skillViewAction, addSkillRef } from "../store/dedottagReduser";
+import { skillViewAction } from "../store/dedottagReduser";
 
 import reactIcon from "./skill-icons/raact-icon.svg";
 import jsIcon from "./skill-icons/js-icon.svg";

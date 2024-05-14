@@ -39,34 +39,38 @@ const References = ({ referenceRef }) => {
       src: "https://game-training.vercel.app/",
       tittle: "gameTraining",
       name: "Game Training",
+      mobile: true,
     },
     {
       src: "https://image-slider-dusky.vercel.app/",
       tittle: "imageSlider",
       name: "Image Slider",
+      mobile: false,
     },
     {
       src: "https://board-henna.vercel.app/",
       tittle: "board",
       name: "Board",
+      mobile: true,
     },
     {
       src: "https://cards-gallery.vercel.app/",
       tittle: "cardsGallery",
       name: "Cards Gallery",
+      mobile: false,
     },
     {
       src: "https://chart-azure.vercel.app/",
       tittle: "chart",
       name: "Chart",
+      mobile: false,
     },
   ];
 
-  const mobileIframes = iframes.filter(
-    (iframe) => iframe.name !== "Board" && iframe.name !== "Game Training"
-  );
-
-  const resultIframeArr = window.innerWidth > 900 ? iframes : mobileIframes;
+  const resultIframeArr =
+    window.innerWidth > 900
+      ? iframes
+      : iframes.filter((iframe) => !iframe.mobile);
 
   return (
     <>

@@ -6,7 +6,7 @@ import HeaderButtons from "../HeaderButtons/HeaderButtons";
 
 const Header = ({ skillRef, referenceRef, mainRef, mainRefMob }) => {
   return (
-    <header className={`header-container`}>
+    <header className="header-container">
       <h2>dedottag</h2>
       <div style={{ display: "flex", alignItems: "center" }}>
         <HeaderButtons
