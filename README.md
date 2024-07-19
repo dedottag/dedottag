@@ -50,6 +50,4 @@
 ---
 
 <div align="center">
-<h3>
-<a href='https://dedottag.vercel.app/'>https://dedottag.vercel.app/</a></h3>
 </div>
