@@ -13,7 +13,7 @@ const desctopList = [
   },
   {
     img: WhatsAppSvg,
-    link: "https://wa.me/79679481068",
+    link: "https://wa.me/79991272772",
     mobile: true,
   },
   {
